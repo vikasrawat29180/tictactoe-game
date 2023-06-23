@@ -1,8 +1,9 @@
-const Square= ({value})=>{
-    
-    return <button type="button" className="square">{value}
+const Square = ({ value, onClick }) => {
+  return (
+    <button type="button" className="square" onClick={onClick}>
+      {value}
     </button>
+  );
+};
 
-} ;
-
-export  default Square;
+export default Square;
