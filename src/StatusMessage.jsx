@@ -1,6 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const StatusMessage = ({ winner, isNext, squares }) => {
+const StatusMessage = ({ winner, gamingBoard }) => {
+  const { squares, isNext } = gamingBoard;
+
   const noMovesleft = squares.every(squareValue => squareValue !== null);
 
   const NextPlayer = isNext ? 'X' : 'O';
@@ -11,7 +13,7 @@ const StatusMessage = ({ winner, isNext, squares }) => {
         <React.Fragment>
           Winner is
           <span className={winner === 'X' ? 'text-green' : 'text-orange'}>
-              {winner}
+            {winner}
           </span>{' '}
         </React.Fragment>
       );
